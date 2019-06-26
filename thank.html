@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>IBM Watson Talent Match App</title>
+<link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
+<script type="text/javascript" src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js">
+var Dropdown = CarbonComponents.Dropdown;
+const dropDownElement = document.getElementById('category-picker');
+const dropDownInstance = Dropdown.create(dropDownElement);
+</script>
+<script type="text/javascript" src="https://github.com/IBM/carbon-components/blob/master/src/components/ui-shell/header-nav.js">
+</script>
+<style>
+body {
+  height: 100%;
+  background:
+    /* top, transparent red */
+    linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1)
+    ),
+    /* bottom, image */
+    url("doors.jpg");
+    background-size: 100%;
+  /* background-size: cover; */
+height: 100%;
+width: 100%;
+  padding-left: 2.5rem;
+  padding-top: 50px;
+  letter-spacing: 0;
+  font-Size: 1rem;
+  Line-height: 1.5rem;
+  color: white;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+}
+.container img {
+  width: 100%;
+  height: auto;
+}
+.container .headline {
+  position: relative;
+  color: #fff;
+  top: 9%;
+  font-size: 120px;
+  left: 2.5rem;
+}
+.container .blurb {
+  position: relative;
+  color: #fff;
+  top: 35%;
+  font-size: 28px;
+  left: 2.5rem;
+}
+.container .banner {
+  position: relative;
+  color: #fff;
+  top: 1%;
+  font-size: 28px;
+  left: 25px;
+  width: 150%;
+}
+h2 {
+  color: white;
+}
+.website-alert + .bx--header {
+    top: 2.5rem;
+}
+.bx--header--website {
+    z-index: 9999;
+    background-color: #171717;
+    border-bottom: 1px solid #3d3d3d;
+}
+.bx--header {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    background-color: #252525;
+    color: #f3f3f3;
+    z-index: 6000;
+    padding-left: 2.5rem;
+}
+a.bx--header__name, a.bx--header__name:hover {
+    color: #f3f3f3;
+}
+a.bx--header__name {
+    font-size: .875rem;
+    line-height: 1.125rem;
+    letter-spacing: .16px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+        padding-left: 1rem;
+    text-decoration: none;
+    letter-spacing: .1px;
+    line-height: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .bx--header .bx--header__name span {
+      font-weight: 600;
+  }
+  h6 {
+    font-size: 144px;
+    Line-height: 160px;
+    font-Weight: 400;
+    Letter-spacing: 0px;
+    Color: white;
+    margin-bottom: 32px;
+  }
+  h7 {
+    font-size: 56px;
+    Line-height: 56px;
+    font-Weight: 400;
+    Letter-spacing: 0px;
+    Color: white;
+    margin-bottom: 24px;
+  }
+h4 {
+font-size: 20px;
+line-height: 26px;
+margin-bottom: 24px;
+letter-spacing: 0px;
+color: white;
+}
+</style>
+</head>
+<body>
+<header class="bx--header bx--header--website" role="banner"><div class="bx--header__name" href="/">IBM Watson Talent:&nbsp;<span>Talent Match App</span></class><div class="bx--header__global"></div></header>
+</header>
+<div class="backgroundimage">
+        <div class="container">
+        <div class="banner">
+        <div style="height: 20px;"></div>
+        </div>
+        <h1 style="padding-top:25px">And the answer is...</h1>
+
+        <div style="height:20px"></div>
