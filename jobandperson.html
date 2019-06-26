@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>IBM Watson Talent Match App</title>
+<link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
+<script type="text/javascript" src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js">
+
+var Dropdown = CarbonComponents.Dropdown;
+const dropDownElement = document.getElementById('category-picker');
+const dropDownInstance = Dropdown.create(dropDownElement);
+</script>
+
+<style>
+
+
+html, body
+{
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+.full-height {
+  min-height: 100%;
+}
+
+.website-alert + .bx--header {
+    top: 2.5rem;
+}
+.bx--header--website {
+    z-index: 9999;
+    background-color: #171717;
+    border-bottom: 1px solid #3d3d3d;
+}
+.bx--header {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    background-color: #252525;
+    color: #f3f3f3;
+    z-index: 6000;
+    padding-left: 2.5rem;
+    font-size: .875rem;
+    letter-spacing: 0;
+}
+
+a.bx--header__name, a.bx--header__name:hover {
+    color: #f3f3f3;
+}
+a.bx--header__name {
+    font-size: .875rem;
+    line-height: 1.125rem;
+    letter-spacing: .16px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+        padding-left: 1rem;
+    text-decoration: none;
+    letter-spacing: .1px;
+    line-height: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .bx--header .bx--header__name span {
+      font-weight: 600;
+  }
+
+
+body {
+  height: 100%;
+  background:
+    /* top, transparent red */
+    linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1)
+    ),
+    /* bottom, image */
+    url("doors.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+height: 100%;
+width: 100%;
+  padding-left: .5rem;
+  padding-top: 50px;
+
+  font-Size: 1rem;
+  Line-height: 1.5rem;
+font-Weight: 400;
+Letter-spacing: 0;
+color: white;
+}
+
+h1 {
+  font-size: .875rem;
+  Line-height: 1.125rem;
+  font-Weight: 600;
+  Letter-spacing: .16px;
+  color: grey;
+}
+
+h2 {
+font-Size: 2.25rem;
+Line-height: 2.75rem;
+Weight: 300;
+Letter-spacing: 0px;
+color: white;
+}
+
+h5 {
+  font-size: 72px;
+  Line-height: 80px;
+  font-Weight: 400;
+  Letter-spacing: 0px;
+  Color: white;
+  margin-bottom: 32px;
+}
+
+h4 {
+font-size: 20px;
+line-height: 26px;
+margin-bottom: 24px;
+letter-spacing: 0px;
+color: white;
+}
+
+h6 {
+  font-size: 144px;
+  Line-height: 160px;
+  font-Weight: 400;
+  Letter-spacing: 0px;
+  Color: white;
+  margin-bottom: 32px;
+}
+
+
+</style>
+
+
+<script>
+
+function loader()
+{
+  document.getElementById('job-info-area').style.display = "block";
+  document.getElementById('person-info-area').style.display = "block";
+}
+
+function showHide( showMe, hideMe)
+{
+  scrollMe( showMe);
+  return;
+}
+
+function scrollMe( scrollHere)
+{
+  document.getElementById(scrollHere).scrollIntoView();
+  return;
+}
+
+function checkValid( idVal, idButton)
+{
+
+  var textEntered = document.getElementById(idVal).value;
+  if ( textEntered.length > 10)
+  {
+    document.getElementById(idButton).disabled = false;
+  }
+}
+
+function checkPaste(id)
+{
+  document.getElementById(id).disabled = false;
+}
+
+function setJob()
+{
+  document.getElementById('job-item').value = document.getElementById('job-info').value;
+}
+</script>
+
+</head>
+<body onload="loader();">
+  <header class="bx--header bx--header--website" role="banner"><div class="bx--header__name" href="/">IBM Watson Talent:&nbsp;<span>Talent Match App</span></class><div class="bx--header__global"></div></header>
+  </header>
+
+          <div id="job-info-area" style="width:60%;min-height:100%;margin-left:35px;">
+          <h1 style="padding-top:25px">Section 1/2</h1>
+          <h5 style="padding-top:5%;">Please add your job description.</h5>
+            <p>Let's start with the complete job description, please paste or enter your information.</p>
+            <div id='wts-frame' style='margin-top:50px;'>
+                <div class="bx--form-item">
+                  <textarea id='job-info' onkeypress="checkValid('job-info', 'next-button-1');" onpaste="checkPaste('next-button-1');" class="bx--text-area bx--text-area--v2" rows="12" cols="50" placeholder="Enter your job description"></textarea>
+                </div>
+            </div>
+            <button type="button" class="bx--btn bx--btn--primary" onclick="showHide( 'person-info-area', 'job-info-area'); setJob();" disabled id="next-button-1" style="margin-top:40px;">Continue</button>
+          </div>
+
+          <div id ="person-info-area" style="width:60%;height:100%;margin-left:35px;">
+            <h1 style="padding-top:75px;">Section 2/2</h1>
+            <h5 style="padding-top:5%;">Now tell us about the candidate.</h5>
+            <p style="margin-top:20px;">Please enter the person's CV here, paste or type it in.</p>
+            <form action='/result'  method='post' name='form1' style="margin-top:40px;">
+
+              <div style="none;">
+                 <input type="hidden" name="job" id="job-item">
+              </div>
+
+                <div id='wts-frame' style='margin-top:50px;'>
+                  <div class="bx--form-item">
+                    <textarea name='person' id='person-info' onkeypress="checkValid('person-info', 'submit-button');" onpaste="checkPaste('submit-button');" class="bx--text-area bx--text-area--v2" rows="12" cols="50" placeholder="Enter the candidate information"></textarea>
+                  </div>
+                </div>
+          <button style="margin-top:40px" type="button" class="bx--btn bx--btn--secondary" onclick="showHide( 'job-info-area', 'person-info-area');" id="back-button-1">Back</button>
+          <input class="bx--btn bx--btn--primary" type="submit" value="Submit" disabled style="margin-top:40px; margin-bottom:180px;" id="submit-button">
+        </form>
+        </div>
+</body>
+</html>
