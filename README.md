@@ -139,6 +139,6 @@ var data = htmlData;
 
 Please refer to the developer experience we have in GitHub - you can get started here - [IBM Watson Talent Services - Get Started](https://github.com/watson-talent-services/developer-documents/blob/master/get-started/get-started.md).
 
-And you will need to start your free trial so you can get your credentials. You can follow this guide, [Talent Match Key Generation Steps(https://github.com/watson-talent-services/developer-documents/blob/master/developer-guide/v1-trial-reg-guide.md).
+And you will need to start your free trial so you can get your credentials. You can follow this guide, [Talent Match Key Generation Steps](https://github.com/watson-talent-services/developer-documents/blob/master/developer-guide/v1-trial-reg-guide.md).
 
 Enjoy!
