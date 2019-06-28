@@ -1,4 +1,4 @@
-var http = require("http");
+Yvar http = require("http");
 var express = require('express');
 var app = express();
 var request = require('request');
@@ -44,7 +44,7 @@ app.post('/result', urlencodedParser, function (req, res){
      { 'Accept': 'application/json',
        'Content-type': 'multipart/form-data',
        'x-ibm-client-secret': ADD YOUR IBM CLIENT SECRET HERE,
-       'x-ibm-client-id': ADD YOUR IBM CLIENT SECRET HERE },
+       'x-ibm-client-id': ADD YOUR IBM CLIENT ID HERE },
        formData:
         {
           rawJob: theJob.toString(),
