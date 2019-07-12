@@ -39,7 +39,7 @@ app.post('/result', urlencodedParser, function (req, res){
   var thePerson = req.body.person;
 
   var options = { method: 'POST',
-    url: 'https://dev.api.ibm.com/watsontalent/development/match?version=1',
+    url: 'https://api.ibm.com/watsontalent/run/match?version=2',
     headers:
      { 'Accept': 'application/json',
        'Content-type': 'multipart/form-data',
